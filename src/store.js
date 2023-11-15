@@ -6,7 +6,7 @@ const reducer = combineReducers({
 });
 
 const store = configureStore({
-  quiz: quiz.reducer,
+  reducer: reducer,
 });
 
 export default store;

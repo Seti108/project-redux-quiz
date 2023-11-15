@@ -1,21 +1,11 @@
-import React from "react";
-import { Provider } from "react-redux";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { quiz } from "./reducers/quiz";
-import store from "./store";
-
-import { CurrentQuestion } from "./components/CurrentQuestion";
-
-const reducer = combineReducers({
-  quiz: quiz.reducer,
-});
-
-const store = configureStore({ reducer });
+import { Provider, useSelector } from "react-redux";
+import store from "./store.js";
+import { StartView } from "./components/StartView.jsx";
 
 export const App = () => {
   return (
     <Provider store={store}>
-      <CurrentQuestion />
+      <StartView />
     </Provider>
   );
 };

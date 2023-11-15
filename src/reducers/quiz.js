@@ -1,27 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import data from "../questions.json";
 
 // Change these to your own questions!
-const questions = [
-  {
-    id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
-    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
-    correctAnswerIndex: 0
-  },
-  {
-    id: 2,
-    questionText:
-      "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018"],
-    correctAnswerIndex: 2
-  }
-];
+// console.log(data.quizzes[Math.floor(Math.random() * 6)]);
 
+const questions = data.quizzes[Math.floor(Math.random() * 4)].questions;
+console.log(questions);
 const initialState = {
   questions,
   answers: [],
-  currentQuestionIndex: 0,
-  quizOver: false
+  currentQuestionIndex: -1,
+  quizOver: false,
+  lastQuiz: questions,
 };
 
 export const quiz = createSlice({
@@ -64,7 +54,7 @@ export const quiz = createSlice({
         answerIndex,
         question,
         answer: question.options[answerIndex],
-        isCorrect: question.correctAnswerIndex === answerIndex
+        isCorrect: question.correctAnswerIndex === answerIndex,
       });
     },
 
@@ -92,6 +82,6 @@ export const quiz = createSlice({
      */
     restart: () => {
       return initialState;
-    }
-  }
+    },
+  },
 });
