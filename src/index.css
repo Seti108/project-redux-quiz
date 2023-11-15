@@ -1,13 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital@1&family=Roboto:wght@300;400&family=Space+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital@1&family=Roboto:wght@300;400&family=Space+Grotesk:wght@400;600&family=Space+Mono:wght@700&display=swap");
+
 :root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --blue: blue;
+  --darkblue: #0a042f;
+  --main-gradient: linear-gradient(
+    113deg,
+    rgba(141, 65, 176, 1),
+    rgba(78, 90, 200, 1)
+  );
+  --failure-gradient: linear-gradient(
+    113deg,
+    rgba(58, 160, 174, 1),
+    rgba(17, 138, 58, 1)
+  );
+  --success-gradient: linear-gradient(
+    113deg,
+    rgba(220, 96, 156, 1),
+    rgba(135, 21, 49, 1)
+  );
+  --transparent-white: rgba(255, 255, 255, 1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: clamp(16px, 3vw, 32px);
+}
+
+body {
+  background-color: #ffff;
+  font-family: "Space Grotesk", sans-serif;
+  max-width: 100vw;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.2rem;
+  line-height: 1.1em;
+}
+
+p {
+  line-height: 1.5em;
 }
