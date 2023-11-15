@@ -1,0 +1,204 @@
+{
+  "quizzes": [
+    {
+      "questions": [
+        {
+          "question": "What is the chemical symbol for gold?",
+          "options": ["Au", "Ag", "Fe", "Hg"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "question": "Which river is the longest in the world?",
+          "options": ["Amazon", "Nile", "Mississippi", "Yangtze"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "Who wrote the play 'Romeo and Juliet'?",
+          "options": [
+            "William Shakespeare",
+            "Jane Austen",
+            "Charles Dickens",
+            "F. Scott Fitzgerald"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "question": "What is the capital city of Australia?",
+          "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "question": "In which film did Leonardo DiCaprio win his first Academy Award for Best Actor?",
+          "options": [
+            "Titanic",
+            "The Revenant",
+            "Inception",
+            "The Wolf of Wall Street"
+          ],
+          "correctAnswerIndex": 1
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "What is the capital of France?",
+          "options": ["Berlin", "Madrid", "Paris", "Rome"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "question": "Which planet is known as the 'Red Planet'?",
+          "options": ["Earth", "Mars", "Venus", "Jupiter"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "Who is the author of 'To Kill a Mockingbird'?",
+          "options": [
+            "J.K. Rowling",
+            "Harper Lee",
+            "George Orwell",
+            "Ernest Hemingway"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "What is the largest ocean on Earth?",
+          "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "question": "Which element has the chemical symbol 'O'?",
+          "options": ["Osmium", "Oxygen", "Gold", "Iodine"],
+          "correctAnswerIndex": 1
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "Who is the current President of the United States?",
+          "options": [
+            "Barack Obama",
+            "Joe Biden",
+            "Donald Trump",
+            "George W. Bush"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "What is the currency of Japan?",
+          "options": ["Won", "Yuan", "Yen", "Ringgit"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "question": "Which scientist developed the theory of general relativity?",
+          "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Galileo Galilei",
+            "Stephen Hawking"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "What is the capital of Brazil?",
+          "options": [
+            "Buenos Aires",
+            "Brasília",
+            "Rio de Janeiro",
+            "São Paulo"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "In which year did World War II end?",
+          "options": ["1943", "1945", "1947", "1950"],
+          "correctAnswerIndex": 1
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "Who painted the Mona Lisa?",
+          "options": [
+            "Vincent van Gogh",
+            "Leonardo da Vinci",
+            "Pablo Picasso",
+            "Claude Monet"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "What is the largest mammal in the world?",
+          "options": ["Elephant", "Giraffe", "Blue Whale", "Hippopotamus"],
+          "correctAnswerIndex": 2
+        },
+        {
+          "question": "Which country is known as the 'Land of the Rising Sun'?",
+          "options": ["China", "Japan", "South Korea", "Thailand"],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "Who wrote '1984'?",
+          "options": [
+            "George Orwell",
+            "Aldous Huxley",
+            "Ray Bradbury",
+            "J.K. Rowling"
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "question": "What is the boiling point of water in Celsius?",
+          "options": ["100°C", "0°C", "50°C", "200°C"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "question": "Which famous scientist developed the theory of evolution by natural selection?",
+          "options": [
+            "Isaac Newton",
+            "Charles Darwin",
+            "Gregor Mendel",
+            "Marie Curie"
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "question": "What is the currency of Germany?",
+          "options": ["Euro", "Pound Sterling", "Mark", "Dollar"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "question": "Who played the character of Tony Stark (Iron Man) in the Marvel Cinematic Universe?",
+          "options": [
+            "Chris Evans",
+            "Chris Hemsworth",
+            "Robert Downey Jr.",
+            "Mark Ruffalo"
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "question": "Which mountain is the tallest in the world?",
+          "options": ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
+          "correctAnswerIndex": 0
+        },
+        {
+          "question": "What is the chemical symbol for water?",
+          "options": ["H2O", "CO2", "O2", "N2"],
+          "correctAnswerIndex": 0
+        }
+      ]
+    }
+  ]
+}
