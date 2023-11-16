@@ -1,22 +1,10 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { quiz } from "../../reducers/quiz";
+import { SummaryMain } from "./SummaryMain";
 
 export const QuestionSummary = () => {
-  const answers = useSelector((state) => state.quiz.answers);
-  console.log(answers);
-  const dispatch = useDispatch();
-  const restartQuiz = () => {
-    dispatch(quiz.actions.restart());
-  };
-  const newQuiz = () => {
-    location.reload();
-  };
 
   return (
-    <div>
-      <button onClick={restartQuiz}>Try again!</button>
-      <button onClick={newQuiz}>Try new quiz</button>
-    </div>
+  <section className="summary-container">
+   <SummaryMain />
+    </section>
   );
 };
