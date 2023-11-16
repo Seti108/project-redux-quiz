@@ -1,0 +1,46 @@
+/* HEADER */
+.question-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40vh;
+  padding: 2rem 1rem;
+}
+
+.progress-timer-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.progress-timer-div span {
+  font-family: "Space Mono";
+  font-size: 2rem;
+}
+
+.timer-div {
+  background-color: var(--transparent-white);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* MAIN */
+
+.question-options {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.question-option {
+  border: 1px solid var(--darkblue);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.question-option input {
+  display: none;
+  width: 100%;
+}

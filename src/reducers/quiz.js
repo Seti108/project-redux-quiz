@@ -5,10 +5,10 @@ import data from "../questions.json";
 // console.log(data.quizzes[Math.floor(Math.random() * 6)]);
 
 const questions = data.quizzes[Math.floor(Math.random() * 4)].questions;
-// console.log(questions);
 const initialState = {
   questions,
   answers: [],
+  time: [],
   currentQuestionIndex: -1,
   quizOver: false,
   lastQuiz: questions,
@@ -71,6 +71,11 @@ export const quiz = createSlice({
       } else {
         state.currentQuestionIndex += 1;
       }
+    },
+
+    saveTime: (state, action) => {
+      const timeValue = action.payload;
+      state.time.push(timeValue);
     },
 
     /**

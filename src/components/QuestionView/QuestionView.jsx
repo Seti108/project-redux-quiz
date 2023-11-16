@@ -1,7 +1,8 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { quiz } from "../../reducers/quiz";
 import { QuestionMain } from "./QuestionMain";
+import { QuestionHeader } from "./QuestionHeader";
 
 export const QuestionView = () => {
   const question = useSelector(
@@ -12,16 +13,10 @@ export const QuestionView = () => {
     return <h1>Oh no! I could not find the current question!</h1>;
   }
 
-  const dispatch = useDispatch();
-  const handleClick = () => {
-    dispatch(quiz.actions.goToNextQuestion());
-  };
-
   return (
-    <div>
-      <h1>Question: {question?.question}</h1>
+    <>
+      <QuestionHeader />
       <QuestionMain />
-      <button onClick={handleClick}>NÄSTA</button>
-    </div>
+    </>
   );
 };
