@@ -34,11 +34,21 @@
 }
 
 .question-option {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   border: 1px solid var(--darkblue);
   margin-bottom: 0.5rem;
   border-radius: 4px;
   padding: 0.5rem;
+}
+
+.question-option span {
+  flex-basis: 80%;
+}
+
+.question-option img {
+  width: 1.5rem;
+  height: auto;
 }
 
 .question-option input {
@@ -53,20 +63,21 @@
   border: 2px solid var(--darkblue);
 }
 
+.answer-checkbox {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  right: 0.5em;
+  top: 0.5em;
+  bottom: 0.5em;
+  flex-basis: 20%;
+  border-radius: 4px;
+}
+
 .answer-correct {
-  position: absolute;
   background: var(--success-gradient);
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 20%;
 }
 
 .answer-incorrect {
-  position: absolute;
   background: var(--failure-gradient);
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 20%;
 }
