@@ -3,6 +3,7 @@ import { QuestionOption } from "./QuestionOption";
 import { QuestionButton } from "./QuestionButton";
 
 export const QuestionMain = () => {
+  const answers = useSelector((state) => state.quiz.answers);
   const index = useSelector((state) => state.quiz.currentQuestionIndex);
   const options = useSelector((state) => state.quiz.questions[index]);
   return (
@@ -11,7 +12,7 @@ export const QuestionMain = () => {
         {options.options.map((option, index) => {
           const id = options.id;
           return (
-            <QuestionOption key={index} id={id} index={index} text={option} />
+            <QuestionOption key={option} id={id} index={index} text={option} />
           );
         })}
       </form>

@@ -21,7 +21,6 @@ export const QuestionHeader = () => {
 
     return () => {
       clearInterval(countdown);
-      console.log("Unmount");
     };
   });
   return (

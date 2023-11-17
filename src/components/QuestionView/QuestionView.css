@@ -34,6 +34,7 @@
 }
 
 .question-option {
+  position: relative;
   border: 1px solid var(--darkblue);
   margin-bottom: 0.5rem;
   border-radius: 4px;
@@ -42,5 +43,30 @@
 
 .question-option input {
   display: none;
-  width: 100%;
+}
+
+.question-option label {
+  min-width: 100%;
+}
+
+.selected {
+  border: 2px solid var(--darkblue);
+}
+
+.answer-correct {
+  position: absolute;
+  background: var(--success-gradient);
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+}
+
+.answer-incorrect {
+  position: absolute;
+  background: var(--failure-gradient);
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
 }

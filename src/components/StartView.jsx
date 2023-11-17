@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 export const StartView = () => {
   const index = useSelector((state) => state.quiz.currentQuestionIndex);
   const quizOver = useSelector((state) => state.quiz.quizOver);
-  console.log(index);
   return (
     <main>
       {quizOver ? (

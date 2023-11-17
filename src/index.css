@@ -12,12 +12,12 @@
     rgba(141, 65, 176, 1),
     rgba(78, 90, 200, 1)
   );
-  --failure-gradient: linear-gradient(
+  --success-gradient: linear-gradient(
     113deg,
     rgba(58, 160, 174, 1),
     rgba(17, 138, 58, 1)
   );
-  --success-gradient: linear-gradient(
+  --failure-gradient: linear-gradient(
     113deg,
     rgba(220, 96, 156, 1),
     rgba(135, 21, 49, 1)
