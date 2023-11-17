@@ -4,7 +4,7 @@ import data from "../questions.json";
 // Change these to your own questions!
 // console.log(data.quizzes[Math.floor(Math.random() * 6)]);
 
-const questions = data.quizzes[Math.floor(Math.random() * 4)].questions;
+const questions = data.quizzes[Math.floor(Math.random() * 5)].questions;
 const initialState = {
   questions,
   answers: [],

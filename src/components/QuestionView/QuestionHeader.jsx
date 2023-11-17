@@ -6,32 +6,44 @@ import "./QuestionView.css";
 
 export const QuestionHeader = () => {
   const [timer, setTimer] = useState(30);
+  const [background, setBackground] = useState("purple-gradient");
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
-
-  //   const dispatch = useDispatch();
-
-  //   const totalTime = useSelector((state) => state.quiz.time);
+  const index = useSelector((state) => state.quiz.currentQuestionIndex);
+  const answer = useSelector((state) => state.quiz.answers[index]);
 
   useEffect(() => {
-    const countdown = setInterval(() => {
-      setTimer((prevTimer) => (prevTimer > 0 ? prevTimer - 1 : "00"));
-    }, 1000);
+    if (answer) {
+      if (answer?.isCorrect) {
+        setBackground("answer-correct");
+      } else if (!answer?.isCorrect) {
+        setBackground("answer-incorrect");
+      }
+    } else return;
+  }, [answer]);
 
-    return () => {
-      clearInterval(countdown);
-    };
-  });
   return (
-    <header className="question-header purple-gradient">
-      <div className="progress-timer-div">
-        <Progress />
-        <div className="timer-div">
-          <Timer timer={timer} />
+    <header className={`question-header ${background}`}>
+      <div className="header-content">
+        <div className="progress-timer-div">
+          <Progress />
+          <div className="timer-div">
+            <Timer timer={timer} />
+          </div>
         </div>
+        <h1>{question?.question}</h1>
       </div>
-      <h1>{question?.question}</h1>
     </header>
   );
 };
+
+// useEffect(() => {
+//   const countdown = setInterval(() => {
+//     setTimer((prevTimer) => (prevTimer > 0 ? prevTimer - 1 : "00"));
+//   }, 1000);
+
+//   return () => {
+//     clearInterval(countdown);
+//   };
+// });

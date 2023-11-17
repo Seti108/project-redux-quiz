@@ -19,7 +19,9 @@ export const QuestionView = () => {
   return (
     <>
       <QuestionHeader />
-      <QuestionMain />
+      <section className="questions">
+        <QuestionMain />
+      </section>
     </>
   );
 };

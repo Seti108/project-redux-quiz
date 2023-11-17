@@ -48,7 +48,6 @@ export const QuestionOption = ({ text, id, answerIndex }) => {
             value={text}
             onChange={handleOption}
             checked={selected}
-            // disabled={selected}
           />
           <label htmlFor={text}>{text}</label>
         </>

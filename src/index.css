@@ -25,19 +25,15 @@
   --transparent-white: rgba(255, 255, 255, 0.3);
 }
 
-#root {
-  min-height: 100vh;
-}
-
 * {
   border: 0;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: clamp(16px, 3vw, 32px);
+  font-size: clamp(16px, 1.5vw, 24px);
 }
 
 body {
@@ -64,4 +60,12 @@ p {
 
 .purple-gradient {
   background: var(--main-gradient);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  cursor: pointer;
 }

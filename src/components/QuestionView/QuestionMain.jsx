@@ -3,9 +3,9 @@ import { QuestionOption } from "./QuestionOption";
 import { QuestionButton } from "./QuestionButton";
 
 export const QuestionMain = () => {
-  // const answers = useSelector((state) => state.quiz.answers);
   const index = useSelector((state) => state.quiz.currentQuestionIndex);
   const options = useSelector((state) => state.quiz.questions[index]);
+  const answer = useSelector((state) => state.quiz.answers[index]);
 
   // console.log(options);
   return (

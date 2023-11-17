@@ -1,10 +1,19 @@
 /* HEADER */
 .question-header {
+  height: 40vh;
+  padding: 2rem 0rem;
+}
+
+.header-content {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
-  height: 40vh;
-  padding: 2rem 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
 }
 
 .progress-timer-div {
@@ -28,6 +37,11 @@
 
 /* MAIN */
 
+.questions {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .question-options {
   padding: 1rem;
   font-size: 1.5rem;
@@ -44,6 +58,10 @@
 
 .question-option span {
   flex-basis: 80%;
+}
+
+.question-option span:hover {
+  cursor: pointer;
 }
 
 .question-option img {
@@ -80,4 +98,22 @@
 
 .answer-incorrect {
   background: var(--failure-gradient);
+}
+
+/* BUTTON */
+
+.btn-next {
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  width: calc(100% - 2rem);
+  max-width: calc(800px - 2rem);
+  border-radius: 4px;
+}
+
+.btn-next img {
+  height: 1.5rem;
+  width: auto;
 }
