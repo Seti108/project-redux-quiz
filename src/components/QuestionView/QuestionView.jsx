@@ -1,10 +1,14 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { quiz } from "../../reducers/quiz";
 import { QuestionMain } from "./QuestionMain";
 import { Progress } from "../Progress";
+import { QuestionHeader } from "./QuestionHeader";
+import "./QuestionView.css";
+
 
 export const QuestionView = () => {
+  const dispatch = useDispatch();
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
@@ -12,18 +16,16 @@ export const QuestionView = () => {
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>;
   }
-
-  const dispatch = useDispatch();
-  const handleClick = () => {
-    dispatch(quiz.actions.goToNextQuestion());
-  };
-
+  useEffect(() => {
+    return () => dispatch(quiz.actions.saveTime(Date.now()));
+  }, []);
   return (
     <div>
       <Progress />
-      <h1>Question: {question?.question}</h1>
-      <QuestionMain />
-      <button onClick={handleClick}>NÄSTA</button>
+      <QuestionHeader />
+      <section className="questions">
+        <QuestionMain />
+      </section>
     </div>
   );
 };

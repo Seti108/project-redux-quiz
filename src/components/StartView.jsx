@@ -1,12 +1,14 @@
 import { QuestionView } from "./QuestionView/QuestionView";
 import { QuestionSummary } from "./QuestionSummary/QuestionSummary";
 import { StartHome } from "./StartHome/StartHome";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { quiz } from "../reducers/quiz";
 
 export const StartView = () => {
   const index = useSelector((state) => state.quiz.currentQuestionIndex);
   const quizOver = useSelector((state) => state.quiz.quizOver);
-  console.log(index);
+
   return (
     <main>
       {quizOver ? (
