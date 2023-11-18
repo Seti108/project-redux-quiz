@@ -8,7 +8,7 @@ const questions = data.quizzes[Math.floor(Math.random() * 5)].questions;
 const initialState = {
   questions,
   answers: [],
-  time: [],
+  time: 0,
   currentQuestionIndex: -1,
   quizOver: false,
   lastQuiz: questions,
@@ -73,9 +73,8 @@ export const quiz = createSlice({
       }
     },
 
-    saveTime: (state, action) => {
-      const timeValue = action.payload;
-      state.time.push(timeValue);
+    saveTime: (state) => {
+      state.time += 1;
     },
 
     /**

@@ -49,7 +49,9 @@ export const QuestionOption = ({ text, id, answerIndex }) => {
             onChange={handleOption}
             checked={selected}
           />
-          <label htmlFor={text}>{text}</label>
+          <label htmlFor={text}>
+            <span>{text}</span>
+          </label>
         </>
       )}
     </div>

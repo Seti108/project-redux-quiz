@@ -6,9 +6,9 @@
 
 # Redux Quiz
 
-Replace this readme with your own information about your project.
+A quiz web app with 5 different quizzes using React/Redux for the Technigo React/Redux Upskill course in the autumn of 2023.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Developers: Joona M (@joona-3) and Sebastian Tigerschiöld(@seti108)
 
 ## Getting Started with the Project
 
@@ -24,11 +24,17 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started the project by looking through the goals for the project and chose which goals we were aiming for. After that, we made a flowchart in FigJam to visualize the state, view and actions of our apps.
+
+Once we had that done, we created a mockup of the design and decided on which componentes we should create. We then moved on to making the actual design in Figma.
+
+Once we had everything planned and ready, we split the tasks between us and worked on our own.
+
+If we had more time, we would have implemented the timer to automatically be a "wrong answer" if it ran out. Due to time constraints, we opted for a global timer using Redux to keep track of the total time the quiz took to finish.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link:
 
 ## Instructions
 
