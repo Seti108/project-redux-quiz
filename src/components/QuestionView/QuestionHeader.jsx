@@ -5,7 +5,6 @@ import { Timer } from "../Timer";
 import "./QuestionView.css";
 
 export const QuestionHeader = () => {
-  const [timer, setTimer] = useState(30);
   const [background, setBackground] = useState("purple-gradient");
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
@@ -29,7 +28,7 @@ export const QuestionHeader = () => {
         <div className="progress-timer-div">
           <Progress />
           <div className="timer-div">
-            <Timer timer={timer} />
+            <Timer />
           </div>
         </div>
         <h1>{question?.question}</h1>

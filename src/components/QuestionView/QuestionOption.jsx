@@ -55,25 +55,3 @@ export const QuestionOption = ({ text, id, answerIndex }) => {
     </div>
   );
 };
-{
-  /* {selected && isCorrect && <div className="answer-correct"></div>}
-      {selected && !isCorrect && <div className="answer-incorrect"></div>} */
-}
-
-{
-  /* <>
-<div className={`question-option ${selected ? "selected" : ""}`}>
-  <input
-    type="radio"
-    id={text}
-    className="option"
-    name={text}
-    value={text}
-    onChange={handleOption}
-    checked={selected}
-    disabled={selected}
-  />
-  <label htmlFor={text}>{text}</label>
-</div>
-</> */
-}
