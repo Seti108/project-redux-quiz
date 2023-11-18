@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .summary-header-container {
@@ -12,7 +14,9 @@
     padding: 1.25rem 1rem 3rem 1rem;
 }
 .summary-header-content {
-    padding-top: 6rem;
+    padding: 6rem 1rem 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .question-accordion-container {
     display: flex;

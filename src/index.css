@@ -28,6 +28,7 @@
     rgba(17, 138, 58, 1)
   );
   --transparent-white: rgba(255, 255, 255, 1);
+  --white: white;
 }
 
 * {

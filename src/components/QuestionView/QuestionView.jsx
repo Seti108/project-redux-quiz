@@ -21,7 +21,6 @@ export const QuestionView = () => {
   }, []);
   return (
     <div>
-      <Progress />
       <QuestionHeader />
       <section className="questions">
         <QuestionMain />
