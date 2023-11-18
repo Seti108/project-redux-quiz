@@ -11,10 +11,12 @@ export const SummaryMain = () => {
       location.reload();
     };
   return (
-    <section className="summary-container">
+    <section className="summary-main-container">
     <SummaryAccordion />
-      <button onClick={restartQuiz}>Try again!</button>
-      <button onClick={newQuiz}>Try new quiz</button>
+    <section className="button-wrapper">
+        <button onClick={restartQuiz}>Try again!</button>
+        <button onClick={newQuiz}>Try new quiz</button>
+      </section>
     </section>
   )
 }

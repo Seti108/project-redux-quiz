@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { quiz } from "../../reducers/quiz";
 import { QuestionMain } from "./QuestionMain";
+import { Progress } from "../Progress";
 
 export const QuestionView = () => {
   const question = useSelector(
@@ -19,6 +20,7 @@ export const QuestionView = () => {
 
   return (
     <div>
+      <Progress />
       <h1>Question: {question?.question}</h1>
       <QuestionMain />
       <button onClick={handleClick}>NÄSTA</button>
