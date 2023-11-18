@@ -12,46 +12,60 @@
     rgba(141, 65, 176, 1),
     rgba(78, 90, 200, 1)
   );
-  --failure-gradient: linear-gradient(
+  --success-gradient: linear-gradient(
     113deg,
     rgba(58, 160, 174, 1),
     rgba(17, 138, 58, 1)
   );
-  --success-gradient: linear-gradient(
+  --failure-gradient: linear-gradient(
     113deg,
     rgba(220, 96, 156, 1),
     rgba(135, 21, 49, 1)
   );
-  --transparent-white: rgba(255, 255, 255, 1);
+  --transparent-white: rgba(255, 255, 255, 0.3);
 }
 
 * {
   border: 0;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: clamp(16px, 3vw, 32px);
+  font-size: clamp(16px, 1vw, 32px);
 }
 
 body {
   background-color: #ffff;
   font-family: "Space Grotesk", sans-serif;
   max-width: 100vw;
+  min-height: 100vh;
 }
-
 img {
   width: 100%;
   height: auto;
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.1em;
+  color: white;
 }
 
 p {
   line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.purple-gradient {
+  background: var(--main-gradient);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  cursor: pointer;
 }

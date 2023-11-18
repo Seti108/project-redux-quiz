@@ -1,19 +1,29 @@
 import { useSelector } from "react-redux";
 import { QuestionOption } from "./QuestionOption";
+import { QuestionButton } from "./QuestionButton";
 
 export const QuestionMain = () => {
   const index = useSelector((state) => state.quiz.currentQuestionIndex);
-
   const options = useSelector((state) => state.quiz.questions[index]);
-  //   console.log(options);
+  const answer = useSelector((state) => state.quiz.answers[index]);
+
+  // console.log(options);
   return (
-    <form className="answer-form">
-      {options.options.map((option, index) => {
-        const id = options.id;
-        return (
-          <QuestionOption key={index} id={id} index={index} text={option} />
-        );
-      })}
-    </form>
+    <section className="question-options">
+      <form className="answer-form">
+        {options.options.map((option, index) => {
+          const id = options.id;
+          return (
+            <QuestionOption
+              key={option}
+              id={id}
+              text={option}
+              answerIndex={index}
+            />
+          );
+        })}
+      </form>
+      <QuestionButton />
+    </section>
   );
 };

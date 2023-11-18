@@ -1,28 +1,59 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { quiz } from "../../reducers/quiz";
+import { useEffect, useState } from "react";
+import checkIcon from "../../assets/icons/check_FILL0_wght400_GRAD0_opsz24.svg";
+import closeIcon from "../../assets/icons/close_FILL0_wght400_GRAD0_opsz24.svg";
 
-export const QuestionOption = ({ text, id, index }) => {
+export const QuestionOption = ({ text, id, answerIndex }) => {
+  const index = useSelector((state) => state.quiz.currentQuestionIndex);
+  const answer = useSelector((state) => state.quiz.answers[index]);
   const dispatch = useDispatch();
-  const handleOption = (e) => {
-    // const { id, index } = e.target;
-    dispatch(quiz.actions.submitAnswer({ questionId: id, answerIndex: index }));
+  const [selected, setSelected] = useState(false);
+
+  const disableOptions = () => {
+    const options = document.querySelectorAll(".option");
+    options.forEach((option) => (option.disabled = true));
+  };
+  const handleOption = () => {
+    dispatch(
+      quiz.actions.submitAnswer({ questionId: id, answerIndex: answerIndex })
+    );
+    setSelected(true);
+    disableOptions();
   };
 
   return (
-    <>
-      <input type="radio" id={text} name="answers" onChange={handleOption} />
-      <label htmlFor={text}>{text}</label>
-    </>
+    <div key={text} className={`question-option ${selected ? "selected" : ""}`}>
+      {answer ? (
+        <>
+          <span>{text}</span>
+          {answerIndex === answer.question.correctAnswerIndex && (
+            <div className="answer-checkbox answer-correct">
+              <img src={checkIcon} alt="" />
+            </div>
+          )}
+          {selected && !answer?.isCorrect && (
+            <div className="answer-checkbox answer-incorrect">
+              <img src={closeIcon} alt="" />
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <input
+            type="radio"
+            id={text}
+            className="option"
+            name={text}
+            value={text}
+            onChange={handleOption}
+            checked={selected}
+          />
+          <label htmlFor={text}>
+            <span>{text}</span>
+          </label>
+        </>
+      )}
+    </div>
   );
 };
-{
-  /* <label>
-		<input
-		type="radio"
-		value="0 - 18"
-		onChange={event => setAgeGroup(event.target.value)}
-		checked={ageGroup === "0 - 18"}
-		/>
-		0 - 18
-		</label> */
-}
