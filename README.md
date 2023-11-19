@@ -34,7 +34,7 @@ If we had more time, we would have implemented the timer to automatically be a "
 
 ### View it live
 
-Link:
+https://resilient-rugelach-26655c.netlify.app/
 
 ## Instructions
 
