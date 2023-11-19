@@ -27,7 +27,7 @@
     rgba(58, 160, 174, 1),
     rgba(17, 138, 58, 1)
   );
-  --transparent-white: rgba(255, 255, 255, 1);
+  --transparent-white: rgba(255, 255, 255, 0.3);
   --white: white;
 }
 
@@ -76,14 +76,27 @@ button {
   cursor: pointer;
 }
 
-
 /* sub components css*/
 
-.progress-bar{
+.progress-bar {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 .progress-bar img {
   width: auto;
   margin-right: 0.5rem;
+}
+
+.progress-timer-div span {
+  font-family: "Space Mono";
+  font-size: 2rem;
+}
+
+.timer-div {
+  background-color: var(--transparent-white);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 1rem 0;
 }
