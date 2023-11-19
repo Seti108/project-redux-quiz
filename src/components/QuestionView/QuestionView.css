@@ -23,18 +23,6 @@
   color: white;
 }
 
-.progress-timer-div span {
-  font-family: "Space Mono";
-  font-size: 2rem;
-}
-
-.timer-div {
-  background-color: var(--transparent-white);
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-}
-
 /* MAIN */
 
 .questions {
@@ -43,7 +31,7 @@
 }
 
 .question-options {
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-size: 1.5rem;
 }
 
